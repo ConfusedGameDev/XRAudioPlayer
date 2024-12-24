@@ -8,6 +8,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/06.Scenes/XRAudioPlayer.unity
     guid: 60c476e2b0ba2a84c843a5040eca98bc
+  - enabled: 0
+    path: Assets/Samples/Meta MR Utility Kit/71.0.0/Passthrough Relighting/PassthroughRelighting.unity
+    guid: 36246cc1dd7f015428dc705da9e4497e
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 84bf063dfa207264c84b0ee01e938ee3, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
