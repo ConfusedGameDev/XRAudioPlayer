@@ -107,6 +107,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1958620455813190912}
     m_Modifications:
+    - target: {fileID: 112103309683626137, guid: 30669121554d0cb439b7b1db96f3fd97, type: 3}
+      propertyPath: m_Name
+      value: DIR_CoverFlow
+      objectReference: {fileID: 0}
     - target: {fileID: 1062129523051987910, guid: 30669121554d0cb439b7b1db96f3fd97, type: 3}
       propertyPath: m_Name
       value: PF_CoverFlow
