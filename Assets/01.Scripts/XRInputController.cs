@@ -1,3 +1,4 @@
+using Sirenix.OdinInspector;
 using System;
 using UnityEngine;
 using UnityEngine.Events;
@@ -11,7 +12,11 @@ public class XRInputController : MonoBehaviour
     bool leftHandPinch;
     bool rightHandPinch;
 
-    public UnityEvent onLeftPinchStarted,onLeftPinchEnded, onRightPinchStarted, onRightPinchEnded;
+    [FoldoutGroup("Right hand Events")]
+    public UnityEvent  onRightPinchStarted, onRightPinchEnded;
+
+    [FoldoutGroup("Left hand Events")]
+    public UnityEvent onLeftPinchStarted, onLeftPinchEnded;
 
     Vector3 leftPinchStartPoint, leftPinchEndPoint;
     Vector3 leftPinchDelta;
@@ -25,7 +30,12 @@ public class XRInputController : MonoBehaviour
     public float horizontalSwipeThreshold = 0.2f;
     public float verticalSwipeThreshold = 0.2f;
 
+    [FoldoutGroup("Right hand Events")]
     public UnityEvent onLeftSwipe, onRightSwipe, onUpSwipe, onDownSwipe;
+
+    public float lastLightvalue = 1f;
+    [FoldoutGroup("left hand Events")]
+    public UnityEvent<float> onLightUpdate;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -163,7 +173,10 @@ public class XRInputController : MonoBehaviour
 
     private void updateDeltaX(float x)
     {
-        throw new NotImplementedException();
+        lastLightvalue -= x*0.1f;
+
+        lastLightvalue = Mathf.Clamp(lastLightvalue, -1f, 1f);
+        onLightUpdate.Invoke(lastLightvalue);
     }
 
     Vector3 getFingerPosition(OVRSkeleton skeleton, OVRSkeleton.BoneId id)

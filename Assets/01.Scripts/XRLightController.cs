@@ -7,7 +7,7 @@ public class XRLightController : MonoBehaviour
     [SerializeField] private Material _sceneMaterial;
     private const string HighLightAttenuationShaderPropertyName = "_HighLightAttenuation";
     private const string HighLightOpaquenessShaderPropertyName = "_HighlightOpacity";
-
+    public OVRPassthroughLayer passTroughController;
     [Button]
     private void HighlightSettingsToggled(bool highlightsOn)
     {
@@ -25,6 +25,11 @@ public class XRLightController : MonoBehaviour
         HighlightSettingsToggled(true);
     }
 
+    public void updateDarkness(float darkness)
+    {
+         
+        passTroughController.SetBrightnessContrastSaturation(darkness);
+    }
     // Update is called once per frame
     void Update()
     {
