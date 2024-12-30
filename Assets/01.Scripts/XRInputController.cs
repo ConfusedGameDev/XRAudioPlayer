@@ -1,0 +1,141 @@
+using System;
+using UnityEngine;
+using UnityEngine.Events;
+
+public class XRInputController : MonoBehaviour
+{
+    [SerializeField] OVRHand leftHand;
+    [SerializeField] OVRHand rightHand;
+    [SerializeField] OVRSkeleton leftSkeleton, rightSkeleton;
+ 
+    bool leftHandPinch;
+    bool rightHandPinch;
+
+    public UnityEvent onLeftPinchStarted,onLeftPinchEnded, onRightPinchStarted, onRightPinchEnded;
+
+    Vector3 leftPinchStartPoint, leftPinchEndPoint;
+    Vector3 leftPinchDelta;
+    Vector3 rightPinchStartPoint, rightPinchEndPoint;
+    Vector3 rightPinchDelta;
+
+    private bool hasDirectionDetermined = false;
+    private bool isUpdatingX = false;
+    [SerializeField]  float directionThreshold;
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (leftHand.IsTracked)
+        {
+            if (!leftHandPinch && leftHand.GetFingerIsPinching(OVRHand.HandFinger.Index))
+            {
+                onLeftPinchStarted?.Invoke();
+                Debug.Log("Left pinch started");
+                leftHandPinch = true;
+                leftPinchStartPoint = getFingerPosition(leftSkeleton, OVRSkeleton.BoneId.Hand_IndexTip);
+            }
+            else if (leftHandPinch && leftHand.GetFingerIsPinching(OVRHand.HandFinger.Index))
+            {
+                leftPinchEndPoint = getFingerPosition(leftSkeleton, OVRSkeleton.BoneId.Hand_IndexTip);
+                leftPinchDelta= leftPinchEndPoint- leftPinchStartPoint;
+                Debug.Log("Left pinch  delta "+ leftPinchDelta);
+                if (!hasDirectionDetermined)
+                {
+                    if (Mathf.Abs(leftPinchDelta.y) > Mathf.Abs(leftPinchDelta.x) && Mathf.Abs(leftPinchDelta.y) > directionThreshold)
+                    {
+                        hasDirectionDetermined = true;
+                        isUpdatingX = false;
+                    }
+                    else if (Mathf.Abs(leftPinchDelta.x) > Mathf.Abs(leftPinchDelta.y) && Mathf.Abs(leftPinchDelta.x) > directionThreshold)
+                    {
+                        hasDirectionDetermined = true;
+                        isUpdatingX = true;
+                    }
+                }
+
+                if (hasDirectionDetermined)
+                {
+                    if (isUpdatingX)
+                    {
+                        updateDeltaX(leftPinchDelta.x);
+                    }
+                    else
+                    {
+                        updateDeltaY(leftPinchDelta.y);
+                    }
+                }
+                //Add logic to check for Vertical/ horizontal Controls
+            }
+            else if(leftHandPinch && !leftHand.GetFingerIsPinching(OVRHand.HandFinger.Index))
+            {
+                Debug.Log("Left pinch ended");
+                leftHandPinch = false;
+                onLeftPinchEnded?.Invoke();
+                leftPinchDelta = leftPinchEndPoint - leftPinchStartPoint;
+                leftPinchEndPoint = getFingerPosition(leftSkeleton, OVRSkeleton.BoneId.Hand_IndexTip);
+
+            }
+
+        }
+        if (rightHand.IsTracked)
+        {
+            if (!rightHandPinch && rightHand.GetFingerIsPinching(OVRHand.HandFinger.Index))
+            {
+                Debug.Log("right pinch started");
+
+                onRightPinchStarted?.Invoke();
+                rightHandPinch = true;
+                rightPinchStartPoint = getFingerPosition(rightSkeleton, OVRSkeleton.BoneId.Hand_IndexTip);
+            }
+            else if (rightHandPinch && rightHand.GetFingerIsPinching(OVRHand.HandFinger.Index))
+            {
+
+                rightPinchEndPoint = getFingerPosition(rightSkeleton, OVRSkeleton.BoneId.Hand_IndexTip);
+                rightPinchDelta = rightPinchEndPoint - rightPinchStartPoint;
+                Debug.Log("right pinch delta" + rightPinchDelta);
+
+                //Add logic to check for Vertical/ horizontal Controls
+            }
+            else if (rightHandPinch && !rightHand.GetFingerIsPinching(OVRHand.HandFinger.Index))
+            {
+                rightHandPinch = false;
+                onRightPinchEnded?.Invoke();
+                rightPinchDelta = rightPinchEndPoint - rightPinchStartPoint;
+                rightPinchEndPoint = getFingerPosition(rightSkeleton, OVRSkeleton.BoneId.Hand_IndexTip);
+                Debug.Log("right pinch ended");
+
+
+            }
+        }
+    }
+
+    private void updateDeltaY(float y)
+    {
+        throw new NotImplementedException();
+    }
+
+    private void updateDeltaX(float x)
+    {
+        throw new NotImplementedException();
+    }
+
+    Vector3 getFingerPosition(OVRSkeleton skeleton, OVRSkeleton.BoneId id)
+    {
+        foreach (var b in skeleton.Bones)
+        {
+            // If bone is the the hand index tip
+            if (b.Id == id)
+            {
+                // Store its transform and break the loop
+                return b.Transform.position;
+                
+            }
+        }
+        return Vector3.zero;
+    }
+    }
