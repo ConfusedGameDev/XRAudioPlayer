@@ -3,7 +3,17 @@ guid: 805f1f6907b3f2344910b90760d896ab
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BlackMatte
+    second: {fileID: 2100000, guid: b3bf479e83be07448a26c0875f48c9fb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RecordPlayer-Glass
+    second: {fileID: 2100000, guid: ed2a9cf33dfe5624ab8a75988ddedaa1, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

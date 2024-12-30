@@ -7,6 +7,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: VinylCover_Back
+    second: {fileID: 2100000, guid: 318a923438a17614e8c0c32840eba7ed, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: VinylCover_Front
     second: {fileID: 2100000, guid: 318a923438a17614e8c0c32840eba7ed, type: 2}
   materials:
