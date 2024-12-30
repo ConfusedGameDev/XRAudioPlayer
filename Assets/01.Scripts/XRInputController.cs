@@ -21,6 +21,11 @@ public class XRInputController : MonoBehaviour
     private bool hasDirectionDetermined = false;
     private bool isUpdatingX = false;
     [SerializeField]  float directionThreshold;
+
+    public float horizontalSwipeThreshold = 0.2f;
+    public float verticalSwipeThreshold = 0.2f;
+
+    public UnityEvent onLeftSwipe, onRightSwipe, onUpSwipe, onDownSwipe;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -106,6 +111,43 @@ public class XRInputController : MonoBehaviour
                 rightHandPinch = false;
                 onRightPinchEnded?.Invoke();
                 rightPinchDelta = rightPinchEndPoint - rightPinchStartPoint;
+                if(MathF.Abs( rightPinchDelta.x) > MathF.Abs(rightPinchDelta.y))
+                {
+                    Debug.Log(" horizontal swipe");
+                    if(Mathf.Abs(rightPinchDelta.x)> horizontalSwipeThreshold)
+                    {
+                        Debug.Log("swipe detected");
+                        if (rightPinchEndPoint.x< rightPinchStartPoint.x)
+                        {
+                            Debug.Log("leftSwipe");
+                            onLeftSwipe.Invoke();
+                        }
+                        else
+                        {
+                            Debug.Log("rightSwipe");
+                            onRightSwipe.Invoke();
+                        }
+                    }
+                }
+                else
+                {
+                    Debug.Log("Vertical swipe");
+                    
+                    if (Mathf.Abs(rightPinchDelta.y) > verticalSwipeThreshold)
+                    {
+                        Debug.Log("swipe detected");
+                        if (rightPinchEndPoint.y > rightPinchStartPoint.y)
+                        {
+                            Debug.Log("upSwipe");
+                            onUpSwipe.Invoke();
+                        }
+                        else
+                        {
+                            Debug.Log("downSwipe");
+                            onDownSwipe.Invoke();   
+                        }
+                    }
+                }
                 rightPinchEndPoint = getFingerPosition(rightSkeleton, OVRSkeleton.BoneId.Hand_IndexTip);
                 Debug.Log("right pinch ended");
 
