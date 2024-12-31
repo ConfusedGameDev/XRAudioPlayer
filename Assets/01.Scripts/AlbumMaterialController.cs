@@ -2,7 +2,7 @@ using UnityEngine;
 using Sirenix.OdinInspector;
 public class AlbumMaterialController : MonoBehaviour
 {
-    [SerializeField] private Vector2 offset; // The offset you want to apply
+    public Vector2 offset; // The offset you want to apply
     private Renderer meshRenderer;          // Renderer for the mesh
     private MaterialPropertyBlock propertyBlock;
     [Button]
@@ -41,6 +41,24 @@ public class AlbumMaterialController : MonoBehaviour
         if (propertyBlock == null || meshRenderer == null) return;
         offset.x += 0.25f;
         if (offset.x >= 1f)
+        {
+            offset.x = 0f;
+            offset.y -= 0.25f;
+        }
+        propertyBlock.SetVector("_Offset", offset);
+        meshRenderer.SetPropertyBlock(propertyBlock);
+    }
+
+    public void UpdateOffsets()
+    {
+        propertyBlock.SetVector("_Offset", offset);
+        meshRenderer.SetPropertyBlock(propertyBlock);
+    }
+    public void leftOffset()
+    {
+        if (propertyBlock == null || meshRenderer == null) return;
+        offset.x -= 0.25f;
+        if (offset.x <= -1f)
         {
             offset.x = 0f;
             offset.y += 0.25f;

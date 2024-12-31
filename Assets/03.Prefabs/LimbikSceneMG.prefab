@@ -28125,6 +28125,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rightMovement: {fileID: 4588584547585652870}
+  leftMovement: {fileID: 0}
+  downMovement: {fileID: 0}
+  upMovement: {fileID: 0}
   materialControllers:
   - {fileID: 2510915275094170263}
   - {fileID: 5159112721635567077}
@@ -34409,6 +34412,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4931425096121518097, guid: 1ab8c059ced7b71438d8d2e94bd28125, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5066672015732338910, guid: 1ab8c059ced7b71438d8d2e94bd28125, type: 3}
+      propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
