@@ -1149,7 +1149,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2735586676247788563, guid: 92ceac289fedd164999c2f02c3d77c7e, type: 3}
       propertyPath: m_text
-      value: Volume
+      value: Ambient Light
       objectReference: {fileID: 0}
     - target: {fileID: 2735586676247788563, guid: 92ceac289fedd164999c2f02c3d77c7e, type: 3}
       propertyPath: m_fontSize
@@ -1429,7 +1429,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2735586676247788563, guid: 92ceac289fedd164999c2f02c3d77c7e, type: 3}
       propertyPath: m_text
-      value: Ambient Light
+      value: Volume
       objectReference: {fileID: 0}
     - target: {fileID: 2735586676247788563, guid: 92ceac289fedd164999c2f02c3d77c7e, type: 3}
       propertyPath: m_fontSize
