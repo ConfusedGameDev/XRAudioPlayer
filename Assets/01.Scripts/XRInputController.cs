@@ -36,6 +36,12 @@ public class XRInputController : MonoBehaviour
     public float lastLightvalue = 1f;
     [FoldoutGroup("left hand Events")]
     public UnityEvent<float> onLightUpdate;
+
+
+    public float lastVolume = 0f;
+    public XRUIController xRUI;
+    public AudioSource audioSource;
+    public UnityEvent<float> onVolumeUpdate;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -88,6 +94,8 @@ public class XRInputController : MonoBehaviour
             }
             else if(leftHandPinch && !leftHand.GetFingerIsPinching(OVRHand.HandFinger.Index))
             {
+                hasDirectionDetermined = false;
+                isUpdatingX=false;
                 Debug.Log("Left pinch ended");
                 leftHandPinch = false;
                 onLeftPinchEnded?.Invoke();
@@ -168,15 +176,20 @@ public class XRInputController : MonoBehaviour
 
     private void updateDeltaY(float y)
     {
-        throw new NotImplementedException();
+        lastVolume += y * 0.015f;
+        lastVolume = Mathf.Clamp01(lastVolume);
+        audioSource.volume = lastVolume;
+        onVolumeUpdate.Invoke(lastVolume);
+        xRUI.UpdateVolume(lastVolume * 100f);
     }
-
+ 
     private void updateDeltaX(float x)
     {
-        lastLightvalue -= x*0.1f;
+        lastLightvalue -= x*0.021f;
 
         lastLightvalue = Mathf.Clamp(lastLightvalue, -1f, 1f);
         onLightUpdate.Invoke(lastLightvalue);
+        xRUI.UpdateBrightness((lastLightvalue + 1f) * 50f);
     }
 
     Vector3 getFingerPosition(OVRSkeleton skeleton, OVRSkeleton.BoneId id)
