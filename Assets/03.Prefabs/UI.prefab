@@ -5831,6 +5831,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI_ProgressBar_Outer
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dd053cc65eeb1ae47b9a21b105deb0ab, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -5923,6 +5927,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dfcd5ed9e6b480647b000430e0854b27, type: 3}
       propertyPath: m_Name
       value: UI_ProgressBar_Inner
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dfcd5ed9e6b480647b000430e0854b27, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

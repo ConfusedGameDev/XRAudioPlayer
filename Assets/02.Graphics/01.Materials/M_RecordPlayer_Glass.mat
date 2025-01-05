@@ -16,7 +16,7 @@ Material:
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 2000
   stringTagMap: {}
   disabledShaderPasses: []
   m_LockedProperties: 
@@ -78,15 +78,15 @@ Material:
     - _Emission: 1
     - _EmissionStrength: 0.074
     - _EmissionStrength1: 1
-    - _FresnelPower: 1.37
+    - _FresnelPower: 1.5
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 0
-    - _NoiseScale: 900
+    - _NoiseScale: 800
     - _OcclusionStrength: 1
-    - _Opacity: 0.95
+    - _Opacity: 0.8
     - _Parallax: 0.02
     - _Refraction: 0.5
     - _Smoothness: 0.5
@@ -105,7 +105,7 @@ Material:
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EdgeColor: {r: 0.615, g: 0.7393031, b: 1, a: 0}
+    - _EdgeColor: {r: 0.6156863, g: 0.7411764, b: 1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

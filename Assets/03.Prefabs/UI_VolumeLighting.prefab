@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5167421347141378443}
   - component: {fileID: 790101976798690752}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: UICanvas_Vertical_Volume
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75,7 +75,7 @@ GameObject:
   - component: {fileID: 8106916051456229259}
   - component: {fileID: 6483523169686619700}
   - component: {fileID: 4808547932386349733}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Arrow_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -149,7 +149,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3634285527113451448}
   - component: {fileID: 2176985011862412820}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: UICanvas_Horizontal_Lighting
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -214,7 +214,7 @@ GameObject:
   - component: {fileID: 7528786783934227986}
   - component: {fileID: 8109678509808556643}
   - component: {fileID: 8642561291483422190}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Arrow_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -289,7 +289,7 @@ GameObject:
   - component: {fileID: 8194039959088013700}
   - component: {fileID: 2244845101712529635}
   - component: {fileID: 2790145576851035084}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Arrow_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -364,7 +364,7 @@ GameObject:
   - component: {fileID: 6372795400796993390}
   - component: {fileID: 5336665652039892003}
   - component: {fileID: 7479891088459228864}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: T_UI_ScaleLines_Thick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -441,7 +441,7 @@ GameObject:
   - component: {fileID: 7400411903927799887}
   - component: {fileID: 3739638191661877577}
   - component: {fileID: 5219597990258950109}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Mask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -561,7 +561,7 @@ GameObject:
   - component: {fileID: 6484165273363872195}
   - component: {fileID: 5016523630146224861}
   - component: {fileID: 896557436921044625}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: T_UI_ScaleLines_Thin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -636,7 +636,7 @@ GameObject:
   - component: {fileID: 5294807693102392053}
   - component: {fileID: 7799495820166721460}
   - component: {fileID: 7113084925912715172}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: T_UI_ScaleLines_Thick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -711,7 +711,7 @@ GameObject:
   - component: {fileID: 1001368597422841190}
   - component: {fileID: 5848791537723951838}
   - component: {fileID: 5343128487407730800}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: T_UI_ScaleLines_Thin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -788,7 +788,7 @@ GameObject:
   - component: {fileID: 3274822504053724760}
   - component: {fileID: 2847440661209108229}
   - component: {fileID: 9213966840390184025}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Mask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -908,7 +908,7 @@ GameObject:
   - component: {fileID: 6501416188200311639}
   - component: {fileID: 1256884840906081980}
   - component: {fileID: 1636354933574863942}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Arrow_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -981,7 +981,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8194910381529325559}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: UI_VolumeLighting
   m_TagString: Untagged
   m_Icon: {fileID: 0}
