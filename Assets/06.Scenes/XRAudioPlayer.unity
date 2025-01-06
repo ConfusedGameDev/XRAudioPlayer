@@ -309,11 +309,6 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 8604015717655479964, guid: 59b59225cfd500444afe627d29c980aa, type: 3}
   m_PrefabInstance: {fileID: 902921599334595239}
   m_PrefabAsset: {fileID: 0}
---- !u!224 &824711773 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 1819606638669574197, guid: 59b59225cfd500444afe627d29c980aa, type: 3}
-  m_PrefabInstance: {fileID: 902921599334595239}
-  m_PrefabAsset: {fileID: 0}
 --- !u!320 &872896346 stripped
 PlayableDirector:
   m_CorrespondingSourceObject: {fileID: 8086240828754717094, guid: 59b59225cfd500444afe627d29c980aa, type: 3}
@@ -383,11 +378,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4202c8d43a8f1b409b1530f1b685c0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!224 &1473472293 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 3099249208054435184, guid: 59b59225cfd500444afe627d29c980aa, type: 3}
-  m_PrefabInstance: {fileID: 902921599334595239}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1497664417 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7379510984648491774, guid: 59b59225cfd500444afe627d29c980aa, type: 3}
@@ -13202,12 +13192,12 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 59b59225cfd500444afe627d29c980aa, type: 3}
 --- !u!224 &902921599334595240 stripped
 RectTransform:
-  m_CorrespondingSourceObject: {fileID: 39413944113543075, guid: 59b59225cfd500444afe627d29c980aa, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8997776745642265409, guid: 59b59225cfd500444afe627d29c980aa, type: 3}
   m_PrefabInstance: {fileID: 902921599334595239}
   m_PrefabAsset: {fileID: 0}
 --- !u!224 &902921599334595241 stripped
 RectTransform:
-  m_CorrespondingSourceObject: {fileID: 124579179158858156, guid: 59b59225cfd500444afe627d29c980aa, type: 3}
+  m_CorrespondingSourceObject: {fileID: 2938445779001372644, guid: 59b59225cfd500444afe627d29c980aa, type: 3}
   m_PrefabInstance: {fileID: 902921599334595239}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &902921599334595242 stripped
@@ -13269,20 +13259,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac67151b8cf83b949ac7f381669622f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brighthnessUpArrow: {fileID: 902921599334595241}
-  brightnessDownArrow: {fileID: 902921599334595240}
+  brightnessUiLines: {fileID: 902921599334595241}
   currentBrightness: 0
   brightnessHolder: {fileID: 902921599334595243}
   brightnessLabel: {fileID: 902921599334595242}
-  minimumBrightness: 50
-  maximumBrightness: -50
-  audioUpArrow: {fileID: 824711773}
-  audioDownArrow: {fileID: 1473472293}
+  minimumBrightness: 70
+  maximumBrightness: -70
+  audioUILines: {fileID: 902921599334595240}
   currentVolume: 0
   audioHolder: {fileID: 923513349}
   audioLabel: {fileID: 1985881584}
-  minVolume: -35
-  maxVolume: 35
+  minVolume: -70
+  maxVolume: 70
   audioSource: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
