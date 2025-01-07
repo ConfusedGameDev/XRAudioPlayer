@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: d16531fb8f8ff0c4fa8260d2f313e06b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 282089
+  packageName: Synesthesure
+  packageVersion: 1.0.1
+  assetPath: Assets/Synesthesure/Scripts/_DEMOs/SceneControl_BaselineSetup.cs
+  uploadId: 718360

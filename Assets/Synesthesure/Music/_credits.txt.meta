@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 64458a60dcc3f4344932f12412ca577e
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 282089
+  packageName: Synesthesure
+  packageVersion: 1.0.1
+  assetPath: Assets/Synesthesure/Music/_credits.txt
+  uploadId: 718360

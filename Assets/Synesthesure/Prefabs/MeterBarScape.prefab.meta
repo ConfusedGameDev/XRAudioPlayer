@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 32ddcc4ead74f0c4c97ff1458b5d8696
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 282089
+  packageName: Synesthesure
+  packageVersion: 1.0.1
+  assetPath: Assets/Synesthesure/Prefabs/MeterBarScape.prefab
+  uploadId: 718360

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 9d4f2a306c60f00418ab622eb55e08c4
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 282089
+  packageName: Synesthesure
+  packageVersion: 1.0.1
+  assetPath: Assets/Synesthesure/Scripts/Audio-Reactive/AudioSignalArc.cs
+  uploadId: 718360

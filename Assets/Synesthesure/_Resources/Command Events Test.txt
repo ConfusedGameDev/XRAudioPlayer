@@ -1,0 +1,155 @@
+Commands for MeterBars example
+
+START
+0 | CameraLocation | 0, .001
+0 | CameraShake | false
+0 | ChangeColor | 1
+
+Intro Drop
+14.4 | CameraLocation | 1, 1
+14.4 | CameraShake | true
+14.4 | ChangeColor | 0
+
+Do do!
+20 | MeterBarHeight | 1900
+20 | CameraLocation | 2, .5
+20 | CameraShake | false
+20 | ChangeColor | 1
+20.5 | MeterBarHeight | 350
+20.5 | CameraLocation | 0, .5
+20.5 | CameraShake | false
+20.5 | ChangeColor | 0
+
+Ah!
+26.5 | MeterBarHeight | 700
+26.5 | CameraLocation | 2, .5
+26.5 | CameraShake | false
+26.5 | ChangeColor | 1
+27 | MeterBarHeight | 350
+27 | CameraLocation | 0, .5
+27 | CameraShake | false
+27 | ChangeColor | 0
+
+Do do!
+32.6 | MeterBarHeight | 1900
+32.6 | CameraLocation | 2, .5
+32.6 | CameraShake | false
+32.6 | ChangeColor | 1
+33.1 | MeterBarHeight | 350
+33.1 | CameraLocation | 0, .5
+33.1 | CameraShake | false
+33.1 | ChangeColor | 0
+
+Do do!
+39 | MeterBarHeight | 1900
+39 | CameraLocation | 2, .5
+39 | CameraShake | false
+39 | ChangeColor | 1
+39.5 | MeterBarHeight | 350
+39.5 | CameraLocation | 0, .5
+39.5 | CameraShake | true
+39.5 | ChangeColor | 0
+
+Baing!
+42 | MeterBarHeight | 700
+42 | CameraLocation | 2, .5
+42 | CameraShake | false
+42 | ChangeColor | 1
+42.5 | MeterBarHeight | 350
+42.5 | CameraLocation | 0, .5
+42.5 | CameraShake | false
+42.5 | ChangeColor | 0
+
+Ahh a ah ah!
+44 | MeterBarHeight | 1900
+44 | CameraLocation | 2, .5
+44 | CameraShake | false
+44 | ChangeColor | 1
+45 | MeterBarHeight | 350
+45 | CameraLocation | 0, .5
+45 | CameraShake | false
+45 | ChangeColor | 0
+
+Do do!
+45.5 | MeterBarHeight | 1900
+45.5 | CameraLocation | 2, .5
+45.5 | CameraShake | false
+45.5 | ChangeColor | 1
+46 | MeterBarHeight | 350
+46 | CameraLocation | 0, .5
+46 | CameraShake | false
+46 | ChangeColor | 0
+
+Baing!
+48.4 | MeterBarHeight | 700
+48.4 | CameraLocation | 2, .5
+48.4 | CameraShake | false
+48.4 | ChangeColor | 1
+49 | MeterBarHeight | 350
+49 | CameraLocation | 0, .5
+49 | CameraShake | false
+49 | ChangeColor | 0
+
+Ahh a ah ah!
+51 | MeterBarHeight | 1700
+51 | CameraLocation | 2, .5
+51 | CameraShake | true
+51 | ChangeColor | 1
+52 | MeterBarHeight | 350
+52 | CameraLocation | 0, .5
+52 | CameraShake | false
+52 | ChangeColor | 0
+
+Baing!
+54.5 | MeterBarHeight | 700
+54.5 | CameraLocation | 2, .5
+54.5 | CameraShake | false
+54.5 | ChangeColor | 1
+55.2 | MeterBarHeight | 350
+55.2 | CameraLocation | 0, .5
+55.2 | CameraShake | false
+55.2 | ChangeColor | 0
+
+Ay ee  ah!
+56.5 | MeterBarHeight | 700
+56.5 | CameraLocation | 2, .5
+56.5 | CameraShake | false
+56.5 | ChangeColor | 1
+57.9 | MeterBarHeight | 350
+57.9 | CameraLocation | 0, .5
+57.9 | CameraShake | false
+57.9 | ChangeColor | 0
+
+Do do!
+58.1 | MeterBarHeight | 1900
+58.1 | CameraLocation | 2, .5
+58.1 | CameraShake | false
+58.1 | ChangeColor | 1
+58.6 | MeterBarHeight | 350
+58.6 | CameraLocation | 0, .5
+58.6 | CameraShake | false
+58.6 | ChangeColor | 0
+
+Baing!
+61 | MeterBarHeight | 700
+61 | CameraLocation | 2, .5
+61 | CameraShake | false
+61 | ChangeColor | 1
+61.5 | MeterBarHeight | 350
+61.5 | CameraLocation | 0, .5
+61.5 | CameraShake | false
+61.5 | ChangeColor | 0
+
+Ahh a ah ah!
+64 | MeterBarHeight | 1700
+64 | CameraLocation | 2, 1
+64 | CameraShake | true
+64 | ChangeColor | 1
+71 | MeterBarHeight | 900
+71 | CameraLocation | 0, .5
+71 | CameraShake | false
+
+87 | CameraShake | true
+90 | CameraShake | false
+90 | ChangeColor | 0
+90 | MeterBarHeight | 350

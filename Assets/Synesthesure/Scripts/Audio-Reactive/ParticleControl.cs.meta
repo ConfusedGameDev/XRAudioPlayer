@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: f48c942d875a0c042ad55462b7c3cb86
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 282089
+  packageName: Synesthesure
+  packageVersion: 1.0.1
+  assetPath: Assets/Synesthesure/Scripts/Audio-Reactive/ParticleControl.cs
+  uploadId: 718360

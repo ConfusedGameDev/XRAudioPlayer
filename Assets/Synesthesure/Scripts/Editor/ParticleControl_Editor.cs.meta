@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: c79115a361cea1d439790b748b50db7a
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 282089
+  packageName: Synesthesure
+  packageVersion: 1.0.1
+  assetPath: Assets/Synesthesure/Scripts/Editor/ParticleControl_Editor.cs
+  uploadId: 718360

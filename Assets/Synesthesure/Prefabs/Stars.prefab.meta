@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: d6c9f87d5fb5abd4094d3b400cb34345
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 282089
+  packageName: Synesthesure
+  packageVersion: 1.0.1
+  assetPath: Assets/Synesthesure/Prefabs/Stars.prefab
+  uploadId: 718360

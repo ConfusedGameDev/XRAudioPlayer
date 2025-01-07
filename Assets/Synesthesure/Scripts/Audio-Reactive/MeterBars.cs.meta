@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 29f85cfcd62a6ca44b3a1534ee5a8dbb
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 282089
+  packageName: Synesthesure
+  packageVersion: 1.0.1
+  assetPath: Assets/Synesthesure/Scripts/Audio-Reactive/MeterBars.cs
+  uploadId: 718360

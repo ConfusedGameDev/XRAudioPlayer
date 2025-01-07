@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 5c455f805c748fa47a6fa74a597f14e4
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 282089
+  packageName: Synesthesure
+  packageVersion: 1.0.1
+  assetPath: Assets/Synesthesure/Materials/Pulsing Sphere.mat
+  uploadId: 718360

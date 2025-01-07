@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: afcca04ecda857a4596a1beb26ed3e4d
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 282089
+  packageName: Synesthesure
+  packageVersion: 1.0.1
+  assetPath: Assets/Synesthesure/Materials/_Default.mat
+  uploadId: 718360

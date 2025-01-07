@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: bb602a0b25f924d4498ed09906b77aa2
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 282089
+  packageName: Synesthesure
+  packageVersion: 1.0.1
+  assetPath: Assets/Synesthesure/Prefabs/Particle System (Sibilance).prefab
+  uploadId: 718360

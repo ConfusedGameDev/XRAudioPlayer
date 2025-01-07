@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ea0953c1fe334d9449b6b2da46348c5a
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 282089
+  packageName: Synesthesure
+  packageVersion: 1.0.1
+  assetPath: Assets/Synesthesure/Prefabs/MeterBar.prefab
+  uploadId: 718360

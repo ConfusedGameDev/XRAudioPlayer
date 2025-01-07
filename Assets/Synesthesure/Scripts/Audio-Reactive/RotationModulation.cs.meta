@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: fee168720af5c054188302b1c3edabb4
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 282089
+  packageName: Synesthesure
+  packageVersion: 1.0.1
+  assetPath: Assets/Synesthesure/Scripts/Audio-Reactive/RotationModulation.cs
+  uploadId: 718360

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 2d2fac7e46c5f694d87fc7102d44d204
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 282089
+  packageName: Synesthesure
+  packageVersion: 1.0.1
+  assetPath: Assets/Synesthesure/Scripts/_MISC/ObjectFollower.cs
+  uploadId: 718360

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: cc723ea4311fcf8409e4b6bb8dc5325f
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 282089
+  packageName: Synesthesure
+  packageVersion: 1.0.1
+  assetPath: Assets/Synesthesure/Prefabs/PhysicsBox Bounce Box.prefab
+  uploadId: 718360

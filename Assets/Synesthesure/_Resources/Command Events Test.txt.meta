@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 7c11e3b8f54a0464c862eae5add71e2a
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 282089
+  packageName: Synesthesure
+  packageVersion: 1.0.1
+  assetPath: Assets/Synesthesure/_Resources/Command Events Test.txt
+  uploadId: 718360

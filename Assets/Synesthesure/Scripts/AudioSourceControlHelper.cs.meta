@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 5d9756739e1013c4a845c96bc3e4686e
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 282089
+  packageName: Synesthesure
+  packageVersion: 1.0.1
+  assetPath: Assets/Synesthesure/Scripts/AudioSourceControlHelper.cs
+  uploadId: 718360

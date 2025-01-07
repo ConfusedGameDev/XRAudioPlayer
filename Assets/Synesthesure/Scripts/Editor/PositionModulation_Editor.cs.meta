@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 9da6d085aef16224db1e90fb9988a4f7
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 282089
+  packageName: Synesthesure
+  packageVersion: 1.0.1
+  assetPath: Assets/Synesthesure/Scripts/Editor/PositionModulation_Editor.cs
+  uploadId: 718360

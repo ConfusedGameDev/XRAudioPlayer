@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 27bb78feebc3f5e4c9ab7a621cafb0b5
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 282089
+  packageName: Synesthesure
+  packageVersion: 1.0.1
+  assetPath: Assets/Synesthesure/Scripts/FrequencyResponseBands.cs
+  uploadId: 718360

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 24dc6551b2c50444dba8f79b23e9c64e
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 282089
+  packageName: Synesthesure
+  packageVersion: 1.0.1
+  assetPath: Assets/Synesthesure/Materials/PhysicsBox Bounce Box.mat
+  uploadId: 718360

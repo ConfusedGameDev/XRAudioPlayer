@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a0d7b90ef9bc0004899ea55c20e6bd89
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 282089
+  packageName: Synesthesure
+  packageVersion: 1.0.1
+  assetPath: Assets/Synesthesure/Prefabs/PhysicsBox Bounce Sphere.prefab
+  uploadId: 718360

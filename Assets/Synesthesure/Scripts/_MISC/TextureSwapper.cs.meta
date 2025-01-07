@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: afd51058ed2aff946ad866c1ba8fe2b3
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 282089
+  packageName: Synesthesure
+  packageVersion: 1.0.1
+  assetPath: Assets/Synesthesure/Scripts/_MISC/TextureSwapper.cs
+  uploadId: 718360

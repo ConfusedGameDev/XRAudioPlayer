@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0e12b570ed066564098db60927000bce
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 282089
+  packageName: Synesthesure
+  packageVersion: 1.0.1
+  assetPath: Assets/Synesthesure/Materials/Meter Boxes.mat
+  uploadId: 718360
