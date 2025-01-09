@@ -8,7 +8,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: BlackMatte
-    second: {fileID: 2100000, guid: b3bf479e83be07448a26c0875f48c9fb, type: 2}
+    second: {fileID: 2100000, guid: 36792c4debd70c643b7a2d6d94d9785a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
