@@ -23,6 +23,7 @@ public class XRUIController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        audioSource.volume = 0.5f;
         UpdateVolume(audioSource.volume);
         deactivateUI();
         

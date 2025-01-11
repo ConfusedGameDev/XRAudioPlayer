@@ -17,44 +17,103 @@ public class AlbumContoller : MonoBehaviour
     public void goToNext()
     {
         if (isPlaying || downMovement.time > 0 || upMovement.time > 0f || rightMovement.time > 0 || leftMovement.time > 0f) return;
-        for (int i = 0; i < materialControllers.Count; i++)
+       
+        if (lastDirector != null && lastDirector != rightMovement)
         {
-            if (i == materialControllers.Count - 1)
+            StartCoroutine(playDirectorBackwards(leftMovement, 0.5f));
+            updateTexturesNext = false;
+            updateTexturesPrev = true;
+        }
+        else
+        {
+            if (updateTexturesNext)
             {
-                materialControllers[materialControllers.Count - 1].offset = materialControllers[0].offset;
+                for (int i = 0; i < materialControllers.Count; i++)
+                {
+                    if (i == materialControllers.Count - 1)
+                    {
+                        materialControllers[materialControllers.Count - 1].offset = materialControllers[0].offset;
+                    }
+                    else
+                    {
+                        materialControllers[i].offset = materialControllers[i + 1].offset;
+
+                    }
+                    materialControllers[i].updateOffset();
+
+                }
             }
             else
             {
-                materialControllers[i].offset = materialControllers[i+1].offset;
-
+                updateTexturesNext = true;
             }
-            materialControllers[i].updateOffset();
+            rightMovement.Play();
+            lastDirector = rightMovement;
+        }
+         
+        
+    }
+    public PlayableDirector lastDirector;
+    bool updateTexturesNext = true;
+    bool updateTexturesPrev = true;
+
+
+    public IEnumerator playDirectorBackwards(PlayableDirector director, float duration)
+    {
+        var delta = 0f;
+        director.timeUpdateMode = DirectorUpdateMode.Manual;
+        while(delta < duration)
+        {
+            yield return null;
+            director.time = Mathf.Lerp(0.5f, 0f, delta / duration);
+            director.Evaluate();
+            delta += Time.deltaTime;
 
         }
-        rightMovement.Play();
-        
-        
+        director.timeUpdateMode = DirectorUpdateMode.GameTime;
+        director.Stop();
+        lastDirector = null;
     }
     [Button]
     public void goToPrev()
     {
         if (isPlaying || downMovement.time > 0 || upMovement.time > 0f || rightMovement.time > 0 || leftMovement.time > 0f) return;
-        for (int i = materialControllers.Count-1; i >= 0; i--)
+       
+        if (lastDirector != null && lastDirector!= leftMovement)
         {
-            if (i == 0)
+            StartCoroutine(playDirectorBackwards(rightMovement, 0.5f));
+            updateTexturesPrev = false;
+            updateTexturesNext = true;
+        }
+        else
+        {
+            if (updateTexturesPrev)
             {
-                materialControllers[0].offset = materialControllers[materialControllers.Count - 1].offset;
+
+                for (int i = materialControllers.Count - 1; i >= 0; i--)
+                {
+                    if (i == 0)
+                    {
+                        materialControllers[0].offset = materialControllers[materialControllers.Count - 1].offset;
+                    }
+
+                    else
+                    {
+                        materialControllers[i].offset = materialControllers[i - 1].offset;
+
+                    }
+                    materialControllers[i].updateOffset();
+
+                }
             }
-            
             else
             {
-                materialControllers[i].offset = materialControllers[i -1 ].offset;
-
+                updateTexturesPrev=true;
             }
-            materialControllers[i].updateOffset();
-
+            leftMovement.Play();
+            lastDirector = leftMovement;
         }
-        leftMovement.Play();
+        
 
 
     }
