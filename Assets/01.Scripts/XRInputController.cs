@@ -187,7 +187,7 @@ public class XRInputController : MonoBehaviour
     {
         lastLightvalue -= x*0.021f;
 
-        lastLightvalue = Mathf.Clamp(lastLightvalue, -1f, 1f);
+        lastLightvalue = Mathf.Clamp(lastLightvalue, -1f, 0f);
         onLightUpdate.Invoke(lastLightvalue);
         xRUI.UpdateBrightness((lastLightvalue + 1f) * 50f);
     }

@@ -44,11 +44,11 @@ public class XRUIController : MonoBehaviour
         minPos.x = minimumBrightness;
         Vector3 maxPos= brightnessUiLines.transform.localPosition;
         maxPos.x= maximumBrightness;
-        brightnessUiLines.localPosition = Vector3.Lerp(minPos, maxPos, currentBrightness / 100f);
+        brightnessUiLines.localPosition = Vector3.Lerp(maxPos, minPos, currentBrightness / 100f);
 
         
 
-        brightnessLabel.text = $"{Mathf.RoundToInt( currentBrightness)}%";
+        brightnessLabel.text = $"{Mathf.RoundToInt( currentBrightness*2)}%";
 
 
     }

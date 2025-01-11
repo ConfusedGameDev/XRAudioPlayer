@@ -4599,6 +4599,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1424389007219724504, guid: 59b59225cfd500444afe627d29c980aa, type: 3}
+      propertyPath: colorMapType
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1424389007219724504, guid: 59b59225cfd500444afe627d29c980aa, type: 3}
+      propertyPath: colorMapEditorType_
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1442704332941596645, guid: 59b59225cfd500444afe627d29c980aa, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -10210,6 +10218,14 @@ PrefabInstance:
     - target: {fileID: 6337576043714710639, guid: 59b59225cfd500444afe627d29c980aa, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399836189390659592, guid: 59b59225cfd500444afe627d29c980aa, type: 3}
+      propertyPath: maximumBrightness
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399836189390659592, guid: 59b59225cfd500444afe627d29c980aa, type: 3}
+      propertyPath: minimumBrightness
+      value: -70
       objectReference: {fileID: 0}
     - target: {fileID: 6409547586124281447, guid: 59b59225cfd500444afe627d29c980aa, type: 3}
       propertyPath: m_AnchorMax.y
