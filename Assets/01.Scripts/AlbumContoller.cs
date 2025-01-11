@@ -58,14 +58,19 @@ public class AlbumContoller : MonoBehaviour
 
 
     }
+    public bool canGoUp { get; set; }
     [Button]
     public void goUp()
     {
-        if (!isPlaying || downMovement.time > 0 || upMovement.time > 0f || rightMovement.time > 0 || leftMovement.time > 0f) return;
+        Debug.Log("TRYING TO GO UP " + canGoUp);
+        if (!canGoUp) return;
+        if(downMovement.state== PlayState.Playing)
+            downMovement.Stop();
         upMovement.Play();
         isPlaying = false;
         animationController.closeSongMenu();
         audioSource.Stop();
+        canGoUp=false;
     }
     [Button]
     public void goDown()
@@ -76,8 +81,15 @@ public class AlbumContoller : MonoBehaviour
         isPlaying = true;
         animationController.openSongMenu();
         StartCoroutine(playAfterDelay());
+        StartCoroutine(canGoUpEnable());    
 
     }
+    public IEnumerator canGoUpEnable()
+    {
+        yield return new WaitForSeconds(3.316667f);
+        canGoUp = true;
+    }
+
 
     public IEnumerator playAfterDelay()
     {
@@ -93,6 +105,7 @@ public class AlbumContoller : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        canGoUp = false;
         if (rightMovement != null)
             rightMovement.stopped += RightMovement_stopped;
     }
