@@ -3,7 +3,7 @@ using Sirenix.OdinInspector;
 using UnityEngine.Playables;
 using System.Collections.Generic;
 using System.Collections;
-public class AlbumContoller : MonoBehaviour
+public class AlbumContoller : SerializedMonoBehaviour
 {
     public PlayableDirector rightMovement, leftMovement, downMovement,upMovement;
 
@@ -13,9 +13,18 @@ public class AlbumContoller : MonoBehaviour
 
     public bool isPlaying=false;
     public AudioSource audioSource;
+
+    public int currentAlbum;
+    public Dictionary<int, AudioClip> clips;
+    public Dictionary<int, GameObject> lightContoller;
+
     [Button]
     public void goToNext()
     {
+        currentAlbum++;
+        if (currentAlbum >6)
+            currentAlbum = -6;
+
         if (isPlaying || downMovement.time > 0 || upMovement.time > 0f || rightMovement.time > 0 || leftMovement.time > 0f) return;
        
         if (lastDirector != null && lastDirector != rightMovement)
@@ -77,6 +86,9 @@ public class AlbumContoller : MonoBehaviour
     [Button]
     public void goToPrev()
     {
+        currentAlbum--;
+        if (currentAlbum < -6)
+            currentAlbum = 6;
         if (isPlaying || downMovement.time > 0 || upMovement.time > 0f || rightMovement.time > 0 || leftMovement.time > 0f) return;
        
         if (lastDirector != null && lastDirector!= leftMovement)
@@ -121,6 +133,10 @@ public class AlbumContoller : MonoBehaviour
     [Button]
     public void goUp()
     {
+        if (lightContoller.ContainsKey(currentAlbum))
+        {
+            lightContoller[currentAlbum].SetActive(false);
+        }
         Debug.Log("TRYING TO GO UP " + canGoUp);
         if (!canGoUp) return;
         if(downMovement.state== PlayState.Playing)
@@ -136,6 +152,8 @@ public class AlbumContoller : MonoBehaviour
     {
         if (isPlaying || downMovement.time > 0 || upMovement.time > 0f || rightMovement.time > 0 || leftMovement.time > 0f) return;
 
+       
+
         downMovement.Play();
         isPlaying = true;
         animationController.openSongMenu();
@@ -149,10 +167,18 @@ public class AlbumContoller : MonoBehaviour
         canGoUp = true;
     }
 
-
+    
     public IEnumerator playAfterDelay()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3.316667f);
+        if (clips.ContainsKey(currentAlbum))
+        {
+            audioSource.clip = clips[currentAlbum];
+        }
+        if (lightContoller.ContainsKey(currentAlbum))
+        {
+            lightContoller[currentAlbum].SetActive(true);
+        }
         audioSource.Play();
     }
 
