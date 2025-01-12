@@ -3,6 +3,7 @@ using Sirenix.OdinInspector;
 using UnityEngine.Playables;
 using System.Collections.Generic;
 using System.Collections;
+using Unity.Mathematics;
 public class AlbumContoller : SerializedMonoBehaviour
 {
     public PlayableDirector rightMovement, leftMovement, downMovement,upMovement;
@@ -17,7 +18,7 @@ public class AlbumContoller : SerializedMonoBehaviour
     public int currentAlbum;
     public Dictionary<int, AudioClip> clips;
     public Dictionary<int, GameObject> lightContoller;
-
+    public GameObject mellowLight, discoLight;
     [Button]
     public void goToNext()
     {
@@ -25,7 +26,7 @@ public class AlbumContoller : SerializedMonoBehaviour
         if (currentAlbum >6)
             currentAlbum = -6;
 
-        if (isPlaying || downMovement.time > 0 || upMovement.time > 0f || rightMovement.time > 0 || leftMovement.time > 0f) return;
+        if (  upMovement.time > 0f || rightMovement.time > 0 || leftMovement.time > 0f) return;
        
         if (lastDirector != null && lastDirector != rightMovement)
         {
@@ -89,7 +90,7 @@ public class AlbumContoller : SerializedMonoBehaviour
         currentAlbum--;
         if (currentAlbum < -6)
             currentAlbum = 6;
-        if (isPlaying || downMovement.time > 0 || upMovement.time > 0f || rightMovement.time > 0 || leftMovement.time > 0f) return;
+        if ( upMovement.time > 0f || rightMovement.time > 0 || leftMovement.time > 0f) return;
        
         if (lastDirector != null && lastDirector!= leftMovement)
         {
@@ -147,16 +148,45 @@ public class AlbumContoller : SerializedMonoBehaviour
         audioSource.Stop();
         canGoUp=false;
     }
+   public int playingAlbum = -99;
+    public GameObject fakeLP;
+    float lastvolume;
+
+    IEnumerator fadeOutSound()
+    {
+        var delta = 0f;
+        while(delta<1.5f)
+        {
+            delta += Time.deltaTime;
+            audioSource.volume = Mathf.Lerp(lastvolume, 0f, delta / 1.5f);
+            yield return null;
+        }
+        audioSource.Stop();
+        audioSource.volume = lastvolume;
+    }
     [Button]
     public void goDown()
     {
-        if (isPlaying || downMovement.time > 0 || upMovement.time > 0f || rightMovement.time > 0 || leftMovement.time > 0f) return;
+        if (playingAlbum== currentAlbum ||  upMovement.time > 0f || rightMovement.time > 0 || leftMovement.time > 0f) return;
 
-       
-
+        Debug.Log("GoingDown");
+        if(downMovement.state== PlayState.Playing)
+        {
+            lastvolume= audioSource.volume; 
+            StartCoroutine(fadeOutSound()); 
+            animationController.closeSongMenu();
+            downMovement.Stop();
+            if(fakeLP)
+                fakeLP.SetActive(true);
+        }
+           
+        if (lightContoller.ContainsKey(currentAlbum))
+        {
+            lightContoller[currentAlbum].SetActive(false);
+        }
+        playingAlbum = currentAlbum;
         downMovement.Play();
         isPlaying = true;
-        animationController.openSongMenu();
         StartCoroutine(playAfterDelay());
         StartCoroutine(canGoUpEnable());    
 
@@ -171,6 +201,8 @@ public class AlbumContoller : SerializedMonoBehaviour
     public IEnumerator playAfterDelay()
     {
         yield return new WaitForSeconds(3.316667f);
+        if (fakeLP)
+            fakeLP.SetActive(false);
         if (clips.ContainsKey(currentAlbum))
         {
             audioSource.clip = clips[currentAlbum];
@@ -180,6 +212,8 @@ public class AlbumContoller : SerializedMonoBehaviour
             lightContoller[currentAlbum].SetActive(true);
         }
         audioSource.Play();
+        animationController.openSongMenu();
+
     }
 
     private void RightMovement_stopped(PlayableDirector obj)
@@ -193,6 +227,11 @@ public class AlbumContoller : SerializedMonoBehaviour
         canGoUp = false;
         if (rightMovement != null)
             rightMovement.stopped += RightMovement_stopped;
+        lightContoller = new Dictionary<int, GameObject>();
+        for (int i = -6;i<7; i++)
+        {
+            lightContoller.Add(i, i%2==0? mellowLight:discoLight);
+        }
     }
 
     // Update is called once per frame

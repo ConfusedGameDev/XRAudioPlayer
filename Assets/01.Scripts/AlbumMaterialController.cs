@@ -4,10 +4,10 @@ public class AlbumMaterialController : MonoBehaviour
 {
     public Vector2 offset; // The offset you want to apply
     private Renderer meshRenderer;          // Renderer for the mesh
-    private MaterialPropertyBlock propertyBlock;
-    [Button]
-    void OnValidate()
+     [Button]
+    void Awake()
     {
+        
         // Get the Renderer component of the GameObject
         meshRenderer = GetComponent<Renderer>();
         if (meshRenderer == null)
@@ -17,59 +17,52 @@ public class AlbumMaterialController : MonoBehaviour
         }
 
         // Initialize the MaterialPropertyBlock
-        propertyBlock = new MaterialPropertyBlock();
-
-        // Set the _Offset property
-        propertyBlock.SetVector("_Offset", offset);
+        
 
         // Apply the property block to the renderer
-        meshRenderer.SetPropertyBlock(propertyBlock);
+        meshRenderer.material.SetVector("_Offset", offset);
     }
+
 
     [Button]
     // Optional: Update the offset dynamically
     public void UpdateOffset(Vector2 newOffset)
     {
-        if (propertyBlock == null || meshRenderer == null) return;
+        if (meshRenderer == null) return;
 
         offset = newOffset;
-        propertyBlock.SetVector("_Offset", offset);
-        meshRenderer.SetPropertyBlock(propertyBlock);
+         meshRenderer.material.SetVector("_Offset", offset);
     }
     public void rightOffset()
     {
-        if (propertyBlock == null || meshRenderer == null) return;
+        if (meshRenderer == null) return;
         offset.x += 0.25f;
         if (offset.x >= 1f)
         {
             offset.x = 0f;
             offset.y -= 0.25f;
         }
-        propertyBlock.SetVector("_Offset", offset);
-        meshRenderer.SetPropertyBlock(propertyBlock);
+        meshRenderer.material.SetVector("_Offset", offset);
     }
 
     public void UpdateOffsets()
     {
-        propertyBlock.SetVector("_Offset", offset);
-        meshRenderer.SetPropertyBlock(propertyBlock);
+        meshRenderer.material.SetVector("_Offset", offset);
     }
     public void leftOffset()
     {
-        if (propertyBlock == null || meshRenderer == null) return;
+        if (meshRenderer == null) return;
         offset.x -= 0.25f;
         if (offset.x <= -1f)
         {
             offset.x = 0f;
             offset.y += 0.25f;
         }
-        propertyBlock.SetVector("_Offset", offset);
-        meshRenderer.SetPropertyBlock(propertyBlock);
+        meshRenderer.material.SetVector("_Offset", offset);
     }
     public void updateOffset()
     {
-        if (propertyBlock == null || meshRenderer == null) return;
-        propertyBlock.SetVector("_Offset", offset);
-        meshRenderer.SetPropertyBlock(propertyBlock);
+        if ( meshRenderer == null) return;
+        meshRenderer.material.SetVector("_Offset", offset);
     }
 }
