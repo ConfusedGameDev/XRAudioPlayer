@@ -138,6 +138,8 @@ public class AlbumContoller : SerializedMonoBehaviour
         {
             lightContoller[currentAlbum].SetActive(false);
         }
+        mellowLight.SetActive(false);
+        discoLight.SetActive(false);
         Debug.Log("TRYING TO GO UP " + canGoUp);
         if (!canGoUp) return;
         if(downMovement.state== PlayState.Playing)

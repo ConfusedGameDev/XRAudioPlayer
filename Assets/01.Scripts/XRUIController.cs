@@ -24,7 +24,8 @@ public class XRUIController : MonoBehaviour
     void Start()
     {
         audioSource.volume = 0.5f;
-        UpdateVolume(audioSource.volume);
+        currentVolume = 50f;
+        UpdateVolume(currentVolume);
         deactivateUI();
         
     }
